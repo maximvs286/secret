@@ -64,9 +64,10 @@ app.get("/", function (req, res) {
   res.render("home");
 });
 
-app.get("/auth/google", function (req, res) {
-  passport.authenticate("google", { scope: ["profile"] });
-});
+app.get(
+  "/auth/google",
+  passport.authenticate("google", { scope: ["profile"] })
+);
 
 app.get("/login", function (req, res) {
   res.render("login");
